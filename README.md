@@ -2,9 +2,9 @@
 
 Here I'll let some experiments with bare metal in [**AVR**](https://en.wikipedia.org/wiki/AVR_microcontrollers) microcontrollers.
 
-In this repository, all the examples and stuff relationed will be exclusively to [**ATmega328P**](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf) (which is a microcontroller from AVR family) and [**Arduino Uno**](https://docs.arduino.cc/hardware/uno-rev3/).
+In this repository, all the examples and stuff will be exclusively to [**ATmega328P**](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf) (which is a microcontroller from AVR family) and [**Arduino Uno**](https://docs.arduino.cc/hardware/uno-rev3/).
 
-The code here are focused in re-create the functions provided by the Arduino Library, such as `pinMode`, `digitalWrite`, `digitalRead`, `delay`, etc. The firmwares in `firmwares` dir use those functions.
+The code here are focused to re-create the functions provided by the Arduino Library, such as `pinMode`, `digitalWrite`, `digitalRead`, `delay`, etc. The firmwares in `firmwares` dir use those functions.
 
 ## Functions so far
 
@@ -12,22 +12,36 @@ The code here are focused in re-create the functions provided by the Arduino Lib
 - `digital_write()`: writes `LOW` or `HIGH` in the given pin.
 - `digital_read()`: reads `LOW` or `HIGH` from the given pin.
 
+## Try it yourself
+
+Compiling the standard lib and the examples (firmwares):
+
+```bash
+make
+```
+
+After that, you can upload the examples inside the `build/firmwares/` dir:
+
+```
+./upload [SERIALPORT] build/firmwares/*.bin
+```
+
+> SERIALPORT is platform dependent, but in my case is something like `/dev/ttyUSB0`.
+
+> Any .bin in `build/firmwares` can be uploaded, but check and modify the code in `firmwares` if necessary.
+
+> Remember: only works on ATmega328P with Arduino Uno.
+
 ## Examples
 
 - **Blinking LED:**
-<video width="320" height="240" style="display: block;" controls>
-  <source src="./assets/blink.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FJVqrd77pOk" frameborder="0" allowfullscreen></iframe>
 
 - **Toggle LED with Push-up Button:**
-<video width="320" height="240" style="display: block;" controls>
-  <source src="./assets/toggle.mp4.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GDJenpOJX3I" frameborder="0" allowfullscreen></iframe>
 
 - **7 segment display:**
-<video width="320" height="240" style="display: block;" controls>
-  <source src="./assets/7display.mp4" type="video/mp4">
-</video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rD-V1SiSl1o" frameborder="0" allowfullscreen></iframe>
 
 ## TODO
 
