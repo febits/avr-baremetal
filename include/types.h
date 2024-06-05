@@ -3,6 +3,9 @@
 
 #include <stdint.h>
 
+#define true 1
+#define false 0
+
 typedef int8_t i8;
 typedef uint8_t u8;
 typedef int16_t i16;
@@ -14,5 +17,8 @@ typedef uint64_t u64;
 
 typedef float f32;
 typedef double f64;
+
+typedef u8 byte;
+typedef u8 bool;
 
 #endif
