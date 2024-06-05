@@ -34,14 +34,9 @@ After that, you can upload the examples inside the `build/firmwares/` dir:
 
 ## Examples
 
-- **Blinking LED:**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FJVqrd77pOk" frameborder="0" allowfullscreen></iframe>
-
-- **Toggle LED with Push-up Button:**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GDJenpOJX3I" frameborder="0" allowfullscreen></iframe>
-
-- **7 segment display:**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/rD-V1SiSl1o" frameborder="0" allowfullscreen></iframe>
+- [**Blinking LED**](https://youtu.be/FJVqrd77pOk)
+- [**Toggle LED with Push-up Button**](https://youtu.be/GDJenpOJX3I)
+- [**7 segment display**](https://youtu.be/rD-V1SiSl1o)
 
 ## TODO
 
