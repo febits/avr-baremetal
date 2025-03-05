@@ -16,14 +16,16 @@ static inline void disable_pwm(u8 pin) {
 }
 
 op_status set_pin_mode(u8 pin, u8 mode) {
-    if (pin > 13 || (mode != INPUT && mode != OUTPUT)) {
+    if (pin > 13 || (mode != INPUT && mode != OUTPUT && mode != INPUT_PULLUP)) {
         return OUT_OF_RANGE;
     }
 
     if (pin <= 7) {
         SETORCLEAR(mode == OUTPUT, DDRD, pin);
+        SETORCLEAR(mode == INPUT_PULLUP, PORTD, pin);
     } else {
         SETORCLEAR(mode == OUTPUT, DDRB, (pin - 8));
+        SETORCLEAR(mode == INPUT_PULLUP, PORTB, (pin - 8));
     }
 
     return SUCCESS;

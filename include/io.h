@@ -3,7 +3,7 @@
 
 #include "types.h"
 
-typedef enum { INPUT, OUTPUT } mode;
+typedef enum { INPUT, OUTPUT, INPUT_PULLUP } mode;
 typedef enum { OUT_OF_RANGE = -1, LOW, HIGH, SUCCESS } op_status;
 
 op_status set_pin_mode(u8 pin, u8 mode);
