@@ -21,26 +21,26 @@ u8 numbers[10][LED_NUMBER_MAX] = {
     {HIGH, HIGH, HIGH, LOW, LOW, HIGH, HIGH, LOW}};
 
 bool display7_print(u8 num) {
-  if (num < 0 || num > MAX_DISPLAYABLE_DIGIT) {
-    return false;
-  }
+    if (num < 0 || num > MAX_DISPLAYABLE_DIGIT) {
+        return false;
+    }
 
-  for (u8 i = 0; i < LED_NUMBER_MAX; i++) {
-    digital_write(pins[i], numbers[num][i]);
-  }
+    for (u8 i = 0; i < LED_NUMBER_MAX; i++) {
+        digital_write(pins[i], numbers[num][i]);
+    }
 
-  return true;
+    return true;
 }
 
 int main(void) {
-  for (u8 i = 0; i < LED_NUMBER_MAX; i++) {
-    set_pin_mode(pins[i], OUTPUT);
-  }
-
-  for (;;) {
-    for (u8 i = 0; i < 10; i++) {
-      display7_print(i);
-      _delay_ms(500);
+    for (u8 i = 0; i < LED_NUMBER_MAX; i++) {
+        set_pin_mode(pins[i], OUTPUT);
     }
-  }
+
+    for (;;) {
+        for (u8 i = 0; i < 10; i++) {
+            display7_print(i);
+            _delay_ms(500);
+        }
+    }
 }
