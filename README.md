@@ -4,7 +4,7 @@ Here I'll let some experiments with bare metal in [**AVR**](https://en.wikipedia
 
 In this repository, all the examples and stuff will be exclusively to [**ATmega328P**](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf) (which is a microcontroller from AVR family) and [**Arduino Uno**](https://docs.arduino.cc/hardware/uno-rev3/).
 
-The code here are focused to re-create the functions provided by the Arduino Library, such as `pinMode`, `digitalWrite`, `digitalRead`, `delay`, etc. The firmwares in `firmwares` dir use those functions.
+The code here are focused to re-create the functions provided by the Arduino Library, such as `pinMode`, `digitalWrite`, `digitalRead`, `delay`, etc. The examples in `examples` dir use those functions.
 
 ## Functions so far
 
@@ -14,21 +14,26 @@ The code here are focused to re-create the functions provided by the Arduino Lib
 
 ## Try it yourself
 
-Compiling the standard lib and the examples (firmwares):
+Firstly, you'll need these tools:
+
+- [avr-gcc](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio/gcc-compilers)
+- [avrdude](https://github.com/avrdudes/avrdude)
+
+Compiling the standard lib and the examples:
 
 ```bash
 make
 ```
 
-After that, you can upload the examples inside the `build/firmwares/` dir:
+After that, you can upload the examples inside the `build/examples/` dir:
 
 ```
-./upload [SERIALPORT] build/firmwares/*.bin
+./upload [SERIALPORT] build/examples/*.bin
 ```
 
 > SERIALPORT is platform dependent, but in my case is something like `/dev/ttyUSB0`.
 
-> Any .bin in `build/firmwares` can be uploaded, but check and modify the code in `firmwares` if necessary.
+> Any .bin in `build/examples` can be uploaded, but check and modify the code in `examples` if necessary.
 
 > Remember: only works on ATmega328P with Arduino Uno.
 
@@ -40,5 +45,5 @@ After that, you can upload the examples inside the `build/firmwares/` dir:
 
 ## TODO
 
-- [ ] Serial Ports Support (Analog)
-- [ ] Bultin Timers Functions (delay, sleep, etc)
+- [ ] UART support
+- [ ] Delay functions with internal timers
