@@ -45,5 +45,5 @@ After that, you can upload the examples inside the `build/examples/` dir:
 
 ## TODO
 
+- [x] Delay functions with internal timers
 - [ ] UART support
-- [ ] Delay functions with internal timers
