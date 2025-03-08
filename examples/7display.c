@@ -21,7 +21,7 @@ u8 numbers[10][LED_NUMBER_MAX] = {
     {HIGH, HIGH, HIGH, LOW, LOW, HIGH, HIGH, LOW}};
 
 bool display7_print(u8 num) {
-    if (num < 0 || num > MAX_DISPLAYABLE_DIGIT) {
+    if (num > MAX_DISPLAYABLE_DIGIT) {
         return false;
     }
 
