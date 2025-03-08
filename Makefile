@@ -1,5 +1,5 @@
 CC=avr-gcc
-CFLAGS=-Os -DF_CPU=16000000UL -mmcu=atmega328p -Iinclude
+CFLAGS=-Wall -Wextra -Wpedantic -Os -DF_CPU=16000000UL -mmcu=atmega328p -Iinclude
 
 BUILD_DIR=build
 EX_DIR=examples
