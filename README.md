@@ -11,6 +11,13 @@ The code here are focused to re-create the functions provided by the Arduino Lib
 - `set_pin_mode()`: sets the pin mode (`INPUT` or `OUTPUT`).
 - `digital_write()`: writes `LOW` or `HIGH` in the given pin.
 - `digital_read()`: reads `LOW` or `HIGH` from the given pin.
+- `delay_ms()`: delays in the given ms.
+- `delay_us()`: delays in the given us.
+- `uart_init()`: initializes the UART with the given baudrate.
+- `uart_sendbyte()`: sends a byte through UART.
+- `uart_recvbyte()`: receives a byte through UART.
+- `uart_puts()`: sends a string through UART.
+- `uart_gets()`: receives a string through UART.
 
 ## Try it yourself
 
@@ -35,15 +42,16 @@ After that, you can upload the examples inside the `build/examples/` dir:
 
 > Any .bin in `build/examples` can be uploaded, but check and modify the code in `examples` if necessary.
 
-> Remember: only works on ATmega328P with Arduino Uno.
+> Remember: only works on ATmega328P
 
 ## Examples
 
 - [**Blinking LED**](https://youtu.be/FJVqrd77pOk)
 - [**Toggle LED with Push-up Button**](https://youtu.be/GDJenpOJX3I)
 - [**7 segment display**](https://youtu.be/rD-V1SiSl1o)
+- [**UART Send String**](https://youtu.be/2ql-EVmToGw?si=bWCRb87EyAGVIIqr)
 
 ## TODO
 
 - [x] Delay functions with internal timers
-- [ ] UART support
+- [x] UART support
